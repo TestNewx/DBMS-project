@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------
+    Outter
+    Grid
+  --------------------------------- */
+
+.outter-grid {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+  grid-template-areas:
+    "heading"
+    "inner-grid";
+}
+.heading {
+  grid-area: heading;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  background-color: aqua;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-between; /* sections have not been named n assigned */
+}
+.left-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-head {
+  display: flex;
+}
+.middle-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.left-head a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------------------------
+  Inner Grid
+  ------------------------ */
+
+.inner-grid {
+  grid-area: inner-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left-grid right-grid";
+  font-family: "Dosis", sans-serif;
+}
+.left-grid {
+  grid-area: left-grid;
+  background-color: bisque;
+  align-self: center;
+  justify-self: center;
+}
+.right-grid {
+  grid-area: right-grid;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.l-content {
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  height: 40vh;
+  width: 80vh;
+  border: solid 2px;
+  background-color: aqua;
+  grid-template-areas:
+    "search"
+    "view";
+}
+.search {
+  grid-area: search;
+  background-color: coral;
+}
+.view {
+  grid-area: view;
+  background-color: dodgerblue;
+}
