@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------
+    Outter
+    Grid
+  --------------------------------- */
+
+.outter-grid {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+  grid-template-areas:
+    "heading"
+    "inner-grid";
+}
+.heading {
+  grid-area: heading;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  background-color: aqua;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-between; /* sections have not been named n assigned */
+}
+.left-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-head {
+  display: flex;
+}
+.middle-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.left-head a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------------------------
+  Inner Grid
+  ------------------------ */
+
+.inner-grid {
+  grid-area: inner-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left-grid right-grid";
+  font-family: "Dosis", sans-serif;
+}
+.left-grid {
+  grid-area: left-grid;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.right-grid {
+  grid-area: right-grid;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.l-content {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  grid-template-rows: 1fr 80px;
+  height: 250px;
+  width: 400px;
+
+  background-color: aqua;
+  grid-template-areas:
+    "search"
+    "view";
+}
+.search {
+  grid-area: search;
+  background-color: white;
+  display: flex;
+}
+.view {
+  grid-area: view;
+  background-color: white;
+  display: flex;
+}
+#search {
+  align-self: center;
+  border-radius: 40px;
+  height: 75px;
+  width: 350px;
+  border-style: none;
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 3px #ccc;
+  padding-left: 60px;
+}
+.search i {
+  align-self: center;
+  position: absolute;
+  padding-left: 40px;
+}
+.container {
+  align-self: center;
+  background-color: white;
+  width: 105px;
+  height: 40px;
+
+  border-radius: 30px;
+}
+/* .nifty {
+  align-self: center;
+  background-color: white;
+  width: 125px;
+  height: 60px;
+  padding-left: 20px;
+  border-radius: 30px;
+} */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 3px #ccc;
+  border-radius: 5px;
+}
+.logo img {
+  width: 50px;
+  height: 30px;
+}
+.adani p {
+  font-size: 10px;
+}
+.r-cont {
+  height: 600px;
+  width: 600px;
+}
+#tradingview_7d357 {
+  height: 500px;
+  width: 600px;
+}

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------
+  Outter
+  Grid
+--------------------------------- */
+
+.outter-grid {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+  grid-template-areas:
+    "heading"
+    "inner-grid";
+}
+.heading {
+  grid-area: heading;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  background-color: aqua;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-between;
+}
+.left-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-head a {
+  position: relative;
+  bottom: 5px;
+}
+.right-head {
+  display: flex;
+}
+.middle-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.left-head a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------------------------
+Inner Grid
+------------------------ */
+
+.inner-grid {
+  grid-area: inner-grid;
+  display: grid;
+  background-color: aquamarine;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main login";
+  font-family: "Dosis", sans-serif;
+}
+.main-grid {
+  grid-area: main;
+  background-color: bisque;
+}
+.login-grid {
+  grid-area: login;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------
+login 
+-------------------- */
+
+.login {
+  width: 300px;
+  height: 300px;
+  background-color: #6b728e;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+}
+#title {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.submit {
+  background-color: rgb(201, 236, 236);
+  border-radius: 25px;
+  width: 70%;
+  border: none;
+  padding: 5px;
+}
+
+.submit:hover {
+  color: rgb(9, 131, 131);
+  transform: scale(1.02);
+}
+#username,
+#password {
+  font-size: small;
+  opacity: 60%;
+  position: absolute;
+  left: 52px;
+}
+#username {
+  top: 43px;
+}
+#password {
+  top: 88px;
+}
+
+#UserIn {
+  width: 70%;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 10px;
+  height: 25px;
+}
+#PassIn {
+  width: 70%;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 10px;
+  height: 25px;
+}
+#forPas {
+  font-size: 12px;
+  margin: 10px;
+  text-decoration: none;
+  opacity: 60%;
+  color: black;
+  position: absolute;
+  right: 40px;
+  top: 122px;
+}
+#PassIn::placeholder,
+#UserIn::placeholder {
+  font-size: 12px;
+}
+
+.signup {
+  position: relative;
+  top: 40px;
+}
+.signup a {
+  text-decoration: none;
+  color: black;
+}
+.signup a:hover {
+  cursor: pointer;
+}
+.form {
+  padding-top: 40px;
+}
